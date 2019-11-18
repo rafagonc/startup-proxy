@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% load render_table from django_tables2 %}
+{% block navbarright %}
+
+
+{% endblock %}
+{% block main %}
+{% if buttons %}
+{% for button in buttons %}
+<a href="{{button.path}}"><button style="margin-top: 10px" class="appbutton btn btn-dark">{{button.name}}</button></a>
+{% endfor %}
+{% endif %}
+
+{% render_table table %}
+{% endblock %}

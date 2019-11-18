@@ -1,0 +1,262 @@
+{% extends "base.html" %}
+{% load static %}
+{% load render_table from django_tables2 %}
+{% block navbarright %}
+
+{% if buttons %}
+{% for button in buttons %}
+<a href="{{button.path}}"><button style="margin-top: 4px" class="btn btn-dark">{{button.name}}</button></a>
+{% endfor %}
+{% endif %}
+
+{% endblock %}
+{% block main %}
+</div>
+{% if response is not None and response.success %}
+<div class="alert alert-success" role="alert">
+    {{response.message}}
+</div>
+{% endif %} {% if response is not None and response.success == False %}
+<div class="alert alert-danger" role="alert">
+    {{response.message}}
+</div>
+{% endif %}
+
+<div class="card text-center">
+    <div style="font-family: Poppins;" class="card-header">
+        {{title}}
+    </div>
+    <div class="card-body">
+        {% load widget_tweaks %}
+        <form method="post" enctype='multipart/form-data'>
+
+            {% csrf_token %}
+
+            {% for hidden_field in form.hidden_fields %}
+            {{ hidden_field }}
+            {% endfor %}
+
+            {% if form.non_field_errors %}
+            <div class="alert alert-danger" role="alert">
+                {% for error in form.non_field_errors %}
+                {{ error }}
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {% for merged_fields in text_input_fields %}
+            <div class="row">
+                {% for field in merged_fields %}
+                <div class="col-md-4 form">
+                    {{ field.label_tag }}
+
+                    {% if field.errors %}
+                    {% render_field field class="form-control is-invalid" %}
+                    {% for error in field.errors %}
+                    <div class="invalid-feedback">
+                        {{ error }}
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    {% render_field field class="form-control" %}
+                    {% endif %}
+                    {% if field.help_text %}
+                    <small class="form-text text-muted">{{ field.help_text }}</small>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+
+            {% for merged_fields in date_input_fields %}
+            <div class="row">
+                {% for field in merged_fields %}
+                <div class="col-md-4 form">
+                    {{ field.label_tag }}
+
+                    {% if field.errors %}
+                    {% render_field field class="form-control is-invalid" %}
+                    {% for error in field.errors %}
+                    <div class="invalid-feedback">
+                        {{ error }}
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    {% render_field field class="form-control datetime" data-provide="datetimepicker" %}
+                    {% endif %}
+                    {% if field.help_text %}
+                    <small class="form-text text-muted">{{ field.help_text }}</small>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+
+            {% for merged_fields in textarea_input_fields %}
+            <div class="row">
+                {% for field in merged_fields %}
+                <div class="col-md-4 form">
+                    {{ field.label_tag }}
+                    <div>
+                        {% if field.errors %}
+                        {% render_field field class="form-control is-invalid" %}
+                        {% for error in field.errors %}
+                        <div class="invalid-feedback">
+                            {{ error }}
+                        </div>
+                        {% endfor %}
+                        {% else %}
+                        {% render_field field class="form-control" %}
+                        {% endif %}
+                        {% if field.help_text %}
+                        <small class="form-text text-muted">{{ field.help_text }}</small>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+
+            {% for merged_fields in extra_input_fields %}
+            <div class="row">
+                {% for field in merged_fields %}
+                <div class="col-md-3 form">
+                    {{ field.label_tag }}
+                    <div>
+                        {% if field.errors %}
+                        {% render_field field class="form-control is-invalid" %}
+                        {% for error in field.errors %}
+                        <div class="invalid-feedback">
+                            {{ error }}
+                        </div>
+                        {% endfor %}
+                        {% else %}
+                        {% render_field field class="form-control" %}
+                        {% endif %}
+                        {% if field.help_text %}
+                        <small class="form-text text-muted">{{ field.help_text }}</small>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+            {% for merged_fields in model_choice_fields %}
+            <div class="row">
+                {% for field in merged_fields %}
+                <div class="col-md-4 form">
+                    {{ field.label_tag }}
+
+                    {% if field.errors %}
+                    {% render_field field class="form-control is-invalid" %}
+                    {% for error in field.errors %}
+                    <div class="invalid-feedback">
+                        {{ error }}
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    {% render_field field class="form-control" %}
+                    {% endif %}
+                    {% if field.help_text %}
+                    <small class="form-text text-muted">{{ field.help_text }}</small>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+
+            {% for merged_fields in choice_input_fields %}
+            <div class="row">
+                {% for field in merged_fields %}
+                <div class="col-md-4 form">
+                    {{ field.label_tag }}
+
+                    {% if field.errors %}
+                    {% render_field field class="form-control is-invalid" %}
+                    {% for error in field.errors %}
+                    <div class="invalid-feedback">
+                        {{ error }}
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    {% render_field field class="form-control" %}
+                    {% endif %}
+                    {% if field.help_text %}
+                    <small class="form-text text-muted">{{ field.help_text }}</small>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+
+            {% for merged_fields in checkbox_input_fields %}
+            <div class="row">
+                {% for field in merged_fields %}
+                <div class="col-md-4 form" style="margin-top: 30px;">
+                    {{ field.label_tag }}
+                    <div>
+                        {% if field.errors %}
+                        {% render_field field class="form-control is-invalid" %}
+                        {% for error in field.errors %}
+                        <div class="invalid-feedback">
+                            {{ error }}
+                        </div>
+                        {% endfor %}
+                        {% else %}
+                        {% render_field field class="mgc-switch" type="checkbox" %}
+                        {% endif %}
+                        {% if field.help_text %}
+                        <small class="form-text text-muted">{{ field.help_text }}</small>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+
+            {% for merged_fields in file_input_fields %}
+            <div class="row">
+                {% for field in merged_fields %}
+                <div class="col-md-3 form">
+                    {{ field.label_tag }}
+
+                    {% if field.errors %}
+                    {% render_field field class="form-control is-invalid" %}
+                    {% for error in field.errors %}
+                    <div class="invalid-feedback">
+                        {{ error }}
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    {% render_field field class="form-control-file" type="file" %}
+                    {% endif %}
+                    {% if field.help_text %}
+                    <small class="form-text text-muted">{{ field.help_text }}</small>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+
+
+
+
+
+            <button type="submit" class="btn btn-dark submit-button">{{submit}}</button>
+            <script type="text/javascript">
+                $(function () {
+                    $(".datetime").each(function (index) {
+                        console.log(this)
+                        $(this).datetimepicker({
+                            language: 'pt-BR'
+                        })
+                    });
+                });
+            </script>
+        </form>
+    </div>
+    <div class="card-footer text-muted">
+        Opensource Project @ 2019
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,112 @@
+{% load render_table from django_tables2 %}
+<!-- {% load staticfiles %}
+{% load static %} -->
+
+
+<!doctype html>
+<html>
+
+{% block header %}
+{% endblock %}
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ace.js" type="text/javascript"
+        charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/mode-dockerfile.js" type="text/javascript"
+        charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/theme-twilight.js" type="text/javascript"
+        charset="utf-8"></script>
+    <link rel="stylesheet" href="http://cdn.zap.be/css/entypo.css">
+    <title>Admin</title>
+    <style>
+        body {
+            background-color: #eee;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .submit-button {
+            margin-top: 10px;
+        }
+
+        .appbutton {
+            margin: 10px;
+        }
+
+        body {}
+
+        .bg-color {
+            background-color: #2c3e50;
+        }
+
+        .app-name {
+            color: black;
+            text-align: left;
+            padding: 10px;
+            margin-left: 10px;
+        }
+
+
+        .title {
+            font-family: "Poppins";
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .navbar-title {
+            margin-left: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-color">
+        <a class="navbar-brand" href="/proxy/">
+            <img src="https://storage.rafael.network/static/forest.png" width="30" class="d-inline-block align-top"
+                alt=""> <span style="font-family:'Poppins'; margin-left: 20px; font-size: 16px;">Startup Proxy</span>
+        </a>
+        <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto" style="margin-top: 5px;">
+                <li class="nav-item">
+                    <a class="nav-link" href="/proxy/create/">Create</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        {% if alert is not None %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Atenção!</strong> {{alert}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endif %}
+
+        {% block main %}
+        {% endblock %}
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+        <script>
+        </script>
+    </div>
+</body>
+
+</html>

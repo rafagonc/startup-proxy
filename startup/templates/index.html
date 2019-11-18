@@ -1,0 +1,498 @@
+{% load static %}
+{% load staticfiles %}
+
+
+<!doctype html>
+<html lang="en">
+<!--
+
+Page    : index / MobApp
+Version : 1.0
+Author  : Colorlib
+URI     : https://colorlib.com
+
+ -->
+
+<head>
+    <title>+Dinâmico - Ganhe mais motorista</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Mobland - Mobile App Landing Page Template">
+    <meta name="keywords" content="HTML5, bootstrap, mobile, app, landing, ios, android, responsive">
+
+    <!-- Font -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+    <!-- Themify Icons -->
+    <link rel="stylesheet" href="{% static "css/themify-icons.css" %}">
+    <!-- Owl carousel -->
+    <link rel="stylesheet" href="{% static "css/owl.carousel.min.css" %}">
+    <!-- Main css -->
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="30">
+
+    <!-- Nav Menu -->
+
+    <div class="nav-menu fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-dark navbar-expand-lg">
+                        <a class="navbar-brand" href="/"><img width="40px" src="{% static "images/logo_web.svg" %}"
+                                class="img-fluid" alt="logo"></a> <button class="navbar-toggler" type="button"
+                            data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+                            aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                        <div class="collapse navbar-collapse" id="navbar">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item"> <a class="nav-link active" href="#home">TOPO <span
+                                            class="sr-only">(current)</span></a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#features">DESTAQUES</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#gallery">GALERIA</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#pricing">PLANOS</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#contact">CONTATO</a> </li>
+                                <li class="nav-item"><a href="#"
+                                        class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Baixar Agora!</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <header class="bg-gradient" id="home">
+        <div class="container mt-5">
+            <h1 style="font-family: 'Poppins'; font-weight: 600;;">Ganhe mais dirigindo para aplicativos</h1>
+            <p class="tagline">A solução única para quem quer faturar mais dirigindo para aplicativos como Uber, 99 e
+                Cabify utilizando dados de eventos, zonas
+                comerciais e multiplicadores. </p>
+        </div>
+        <div class="img-holder mt-3"><img src="{% static "images/mobile.png" %}" alt="phone" width="350px"
+                style="margin-top: 20px;" class="img-fluid"></div>
+    </header>
+
+    <div class="client-logos my-5">
+        <div class="container text-center">
+            <img src="{% static "images/clients.png" %}" alt="client logos" class="img-fluid" style="height: 80px">
+        </div>
+    </div>
+
+    <div class="section light-bg" id="features">
+
+
+        <div class="container">
+
+            <div class="section-title">
+                <small>DESTAQUES</small>
+                <h3>Use dados a seu favor</h3>
+            </div>
+
+
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="media">
+                                <span class="ti-pulse gradient-fill ti-3x mr-3"></span>
+                                <div class="media-body">
+                                    <h4 class="card-title">Tempo Real</h4>
+                                    <p class="card-text">Capturamos eventos e multiplicadores em tempo real de diversas
+                                        fontes </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="media">
+                                <span class="ti-settings gradient-fill ti-3x mr-3"></span>
+                                <div class="media-body">
+                                    <h4 class="card-title">Fácil</h4>
+                                    <p class="card-text">Enviamos notificações para te direcionar para áreas com mais
+                                        demanda </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="media">
+                                <span class="ti-lock gradient-fill ti-3x mr-3"></span>
+                                <div class="media-body">
+                                    <h4 class="card-title">Seguro</h4>
+                                    <p class="card-text">Trabalhe de madrugada em eventos conhecidos e estabelecimentos
+                                        marcados.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <!-- // end .section -->
+
+
+
+    <div class="section light-bg">
+        <div class="container">
+            <div class="section-title">
+                <small>FUNCIONALIDADES</small>
+                <h3>Entenda como você ganha mais</h3>
+            </div>
+
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#schedule">Notificações</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#communication">Eventos</a>
+                </li>
+
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="schedule">
+                    <div class="d-flex flex-column flex-lg-row">
+                        <div>
+                            <h2>Trabalhamos para você em TEMPO REAL</h2>
+                            <p class="lead"> Receba notificações para onde ir para ganhar mais.
+                            </p>
+                            <p>O +Dinâmico se integra facilmente ao seu trabalho, nosso sistema de atualização de
+                                eventos e zonas comerciais notifica seu
+                                aparelho assim que estiver perto de uma oportunidade de ter uma corrida multiplicada.
+                                Motoristas que trabalham em áreas de alta demanda conseguem aumentar seu faturamento
+                                mensal em 10% a 50%.
+
+                            </p>
+                            <p>
+                            </p>
+                        </div>
+                        <!-- <img src="{% static "images/graphic.png" %}" alt="graphic"
+                            class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0"> -->
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="communication">
+                    <div class="d-flex flex-column flex-lg-row">
+                        <!-- <img src="{% static "images/graphic.png" %}" alt="graphic"
+                            class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0"> -->
+                        <div>
+
+                            <h2>Veja TODOS os eventos acontecendo em sua cidade</h2>
+                            <p class="lead">O sistema do +Dinâmico é integrado com diversas fontes de eventos
+                            </p>
+                            <p> Além de ter que dirigir quase 12 horas por dia, os motoristas não tem tempo para ficar
+                                pesquisando como faturar mais com áreas de alta demanda em sua cidade. O +Dinâmico faz
+                                toda a pesquisa e disponibiliza uma lista com todos os eventos, festas e
+                                festivais acontecendo em sua cidade possibilitando corridas com alto faturamento.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- // end .section -->
+
+
+
+
+    <div class="section light-bg">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 d-flex align-items-center">
+                    <ul class="list-unstyled ui-steps">
+                        <li class="media">
+                            <div class="circle-icon mr-4">1</div>
+                            <div class="media-body">
+                                <h5>Crie uma conta</h5>
+                                <p>Baixe o aplicativo do +Dinâmico na Play Store</p>
+                            </div>
+                        </li>
+                        <li class="media my-4">
+                            <div class="circle-icon mr-4">2</div>
+                            <div class="media-body">
+                                <h5>Ganhe 14 dias grátis</h5>
+                                <p>Ajude outros motoristas compartilhando o +Dinâmico nas
+                                    redes sociais ou por mensagem</p>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="circle-icon mr-4">3</div>
+                            <div class="media-body">
+                                <h5>Fature mais</h5>
+                                <p>Utilize os serviços e dados fornecidos pelo +Dinâmico para aumentar seu faturamento.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <img src="{% static "images/mobile_2.png" %}" alt="iphone" class="img-fluid" style="width: 80%;">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- // end .section -->
+
+    <!-- 
+    <div class="section">
+        <div class="container">
+            <div class="section-title">
+                <small>DEPOIMENTOS</small>
+                <h3>What our Customers Says</h3>
+            </div>
+
+            <div class="testimonials owl-carousel">
+                <div class="testimonials-single">
+                    <img src="{% static "images/client.png" %}" alt="client" class="client-img">
+                    <blockquote class="blockquote">Uniquely streamline highly efficient scenarios and 24/7 initiatives.
+                        Conveniently embrace multifunctional ideas through proactive customer service. Distinctively
+                        conceptualize 2.0 intellectual capital via user-centric partnerships.</blockquote>
+                    <h5 class="mt-4 mb-2">Crystal Gordon</h5>
+                    <p class="text-primary">United States</p>
+                </div>
+                <div class="testimonials-single">
+                    <img src="{% static "images/client.png" %}" alt="client" class="client-img">
+                    <blockquote class="blockquote">Uniquely streamline highly efficient scenarios and 24/7 initiatives.
+                        Conveniently embrace multifunctional ideas through proactive customer service. Distinctively
+                        conceptualize 2.0 intellectual capital via user-centric partnerships.</blockquote>
+                    <h5 class="mt-4 mb-2">Crystal Gordon</h5>
+                    <p class="text-primary">United States</p>
+                </div>
+                <div class="testimonials-single">
+                    <img src="{% static "images/client.png" %}" alt="client" class="client-img">
+                    <blockquote class="blockquote">Uniquely streamline highly efficient scenarios and 24/7 initiatives.
+                        Conveniently embrace multifunctional ideas through proactive customer service. Distinctively
+                        conceptualize 2.0 intellectual capital via user-centric partnerships.</blockquote>
+                    <h5 class="mt-4 mb-2">Crystal Gordon</h5>
+                    <p class="text-primary">United States</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div> -->
+    <!-- // end .section -->
+
+
+    <div class="section light-bg" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <small>GALERIA</small>
+                <h3>O Aplicativo</h3>
+            </div>
+
+            <div class="img-gallery owl-carousel owl-theme">
+                <img src="{% static "images/ss_web_1.png" %}" alt="image">
+                <img src="{% static "images/ss_web_2.png" %}" alt="image">
+                <img src="{% static "images/ss_web_3.png" %}" alt="image">
+                <img src="{% static "images/ss_web_4.png" %}" alt="image">
+                <img src="{% static "images/ss_web_5.png" %}" alt="image">
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- // end .section -->
+
+
+
+
+
+    <div class="section" id="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h3>Planos</h3>
+            </div>
+
+            <div class="card-deck">
+                <div class="card pricing">
+                    <div class="card-head">
+                        <small class="text-primary">MENSAL</small>
+                        <span class="price">R$5,99<br /><sub>a cada mês</sub></span>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <div class="list-group-item">Acesso a todos os eventos e zonas comérciais</div>
+                        <div class="list-group-item">Acesso a multiplicadores dos aplicativos</div>
+                        <div class="list-group-item">Notificações em tempo real</div>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="btn btn-primary btn-lg btn-block">Começar agora!</a>
+                    </div>
+                </div>
+                <div class="card pricing">
+                    <div class="card-head">
+                        <small class="text-primary">TRIMESTRAL</small>
+                        <small style="color: green;">16% de desconto</small>
+                        <span class="price">R$14,99<br /><sub>a cada 3 meses</sub></span>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <div class="list-group-item">Acesso a todos os eventos e zonas comérciais</div>
+                        <div class="list-group-item">Acesso a multiplicadores dos aplicativos</div>
+                        <div class="list-group-item">Notificações em tempo real</div>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="btn btn-primary btn-lg btn-block">Começar agora!</a>
+                    </div>
+                </div>
+
+                <div class="card pricing">
+                    <div class="card-head">
+                        <small class="text-primary">SEMESTRAL</small>
+                        <small style="color: green;">16% de desconto</small>
+
+                        <span class="price">R$24,99<br /><sub>a cada 6 mês</sub></span>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <div class="list-group-item">Acesso a todos os eventos e zonas comérciais</div>
+                        <div class="list-group-item">Acesso a multiplicadores dos aplicativos</div>
+                        <div class="list-group-item">Notificações em tempo real</div>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="btn btn-primary btn-lg btn-block">Começar agora!</a>
+                    </div>
+                </div>
+                <div class="card pricing popular">
+                    <div class="card-head">
+                        <small class="text-primary">ANUAL</small>
+                        <small style="color: green;">25% de desconto</small>
+
+                        <span class="price">R$49,99<br /><sub>a cada ano</sub></span>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <div class="list-group-item">Acesso a todos os eventos e zonas comérciais</div>
+                        <div class="list-group-item">Acesso a multiplicadores dos aplicativos</div>
+                        <div class="list-group-item">Notificações em tempo real</div>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="btn btn-primary btn-lg btn-block">Começar agora!</a>
+                    </div>
+                </div>
+            </div>
+            <!-- // end .pricing -->
+
+
+        </div>
+
+    </div>
+    <!-- // end .section -->
+
+
+    <div class="section pt-0">
+        <div class="container">
+            <div class="section-title">
+                <small>FAQ</small>
+                <h3>Perguntas frequentes</h3>
+            </div>
+
+            <div class="row pt-4">
+                <div class="col-md-6">
+                    <h4 class="mb-3">Posso testar antes de assinar um plano?</h4>
+                    <p class="light-font mb-5">Sim, ao recomendar o +Dinâmico para um outro motorista você
+                        automaticamente ganha 14 dias gratuitos de uso do aplicativo.</p>
+                    <h4 class="mb-3">Como cancelo minha assinatura?</h4>
+                    <p class="light-font mb-5">As assinaturas são completamente controladas pelo Google, você pode
+                        cancelar quando quiser gerenciando suas asssinaturas na Play Store </p>
+
+                </div>
+                <div class="col-md-6">
+                    <h4 class="mb-3">Posso trocar meu plano depois?</h4>
+                    <p class="light-font mb-5">Sim! A qualquer momento você pode trocar para um plano de assinatura com
+                        maior desconto! </p>
+                    <h4 class="mb-3">Por que sou cobrado para usar o +Dinâmico?</h4>
+                    <p class="light-font mb-5">As assinaturas são necessárias para garantir o tempo real da informação
+                        com servidores mais próximos de você!</p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- // end .section -->
+
+
+
+    <div class="section bg-gradient">
+        <div class="container">
+            <div class="call-to-action">
+
+                <div class="box-icon"><span class="ti-mobile gradient-fill ti-3x"></span></div>
+                <h2>Baixe agora</h2>
+                <p class="tagline">Disponíveis para todos os smartphones Android com versão acima de KitKat.</p>
+                <div class="my-4">
+
+                    <!-- <a href="#" class="btn btn-light"><img src="{% static "images/appleicon.png" %}" alt="icon"> App
+                        Store</a> -->
+                    <a href="#" class="btn btn-light"><img src="{% static "images/playicon.png" %}" alt="icon"> Google
+                        play</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- // end .section -->
+
+    <div class="light-bg py-5" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center text-lg-left">
+                    <div class=" d-block d-sm-inline-block">
+                        <p class="mb-2">
+                            <span class="ti-email mr-2"></span> <a class="mr-4"
+                                href="mailto:suporte@maisstartup.com<">suporte@maisstartup.com</a>
+                        </p>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-6">
+                    <div class="social-icons">
+                        <a href="#"><span class="ti-facebook"></span></a>
+                        <a href="#"><span class="ti-twitter-alt"></span></a>
+                        <a href="#"><span class="ti-instagram"></span></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- // end .section -->
+    <footer class="my-5 text-center">
+        <small>
+            <a href="/termos/" class="m-2">TERMOS DE USO</a>
+        </small>
+    </footer>
+
+    <script src="{% static "js/jquery-3.2.1.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.bundle.min.js" %}"></script>
+    <script src="{% static "js/owl.carousel.min.js" %}"></script>
+    <script src="{% static "js/script.js" %}"></script>
+
+</body>
+
+</html>

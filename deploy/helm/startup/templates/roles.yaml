@@ -1,0 +1,25 @@
+# cat scheduler-roles.yaml 
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: {{ .Release.Name }}-role
+rules:
+- apiGroups: ["extensions"]
+  resources: ["ingresses", "ingresses/status"]
+  verbs: ["list", "get", "patch", "update"]
+- apiGroups: ["extensions", "apps"]
+  resources: ["deployments", "deployments/status"]
+  verbs: ["get", "list", "update", "patch"]
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: {{ .Release.Name }}-role-binding
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: default
+roleRef:
+  kind: ClusterRole
+  name: {{ .Release.Name }}-role
+  apiGroup: rbac.authorization.k8s.io

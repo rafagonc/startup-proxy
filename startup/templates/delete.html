@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% load render_table from django_tables2 %}
+{% block navbarright %}
+
+{% endblock %}
+{% block main %}
+<div class="card text-center">
+    <div class="card-header">
+        {{name}}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Delete</h5>
+        <p>Delete {{model_name}} with ID {{pk}}?</p>
+        <form method="post" enctype='multipart/form-data'>
+            {% csrf_token %}
+            <button type="submit">Confirm</button>
+        </form>
+
+    </div>
+</div>
+{% endblock %}

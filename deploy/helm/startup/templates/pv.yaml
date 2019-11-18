@@ -1,0 +1,14 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: startup-pv
+  labels:
+    type: local
+spec:
+  storageClassName: startup
+  capacity:
+    storage: 20Mi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/startup"

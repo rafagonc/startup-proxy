@@ -1,0 +1,38 @@
+replicaCount: 1
+image:
+  repository: rafagonc/startup
+  tag: latest
+  pullPolicy: IfNotPresent
+
+imagePullSecrets: {}
+nameOverride: ""
+fullnameOverride: ""
+
+basicAuth:
+  user: admin
+  pass: admin
+
+service:
+  type: ClusterIP
+  port: 80
+
+persistence:
+  enabled: true
+  storageClass: startup
+  accessMode: ReadWriteOnce
+  size: 20Mi
+
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+    - host: chart-example.local
+      paths: []
+
+  tls: []
+
+resources: {}
+nodeSelector:
+  node0: "true"
+tolerations: []
+affinity: {}

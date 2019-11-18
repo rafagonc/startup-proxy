@@ -1,0 +1,23 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: {{ .Release.Name }}-check-resources-job
+spec:
+  concurrencyPolicy: Allow
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - image: byrnedo/alpine-curl:latest
+            imagePullPolicy: IfNotPresent
+            name: {{ .Release.Name }}-check-resources-job
+            args:
+              - http://{{ .Release.Name }}-service/check/
+            resources: {}
+          restartPolicy: OnFailure
+          dnsPolicy: ClusterFirst
+  schedule: "* * * * *"
+  successfulJobsHistoryLimit: 1
+  suspend: false

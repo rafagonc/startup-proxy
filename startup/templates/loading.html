@@ -1,0 +1,127 @@
+{% load render_table from django_tables2 %}
+<!-- {% load staticfiles %}
+{% load static %} -->
+
+
+<!doctype html>
+<html>
+
+{% block header %}
+{% endblock %}
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:500&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ace.js" type="text/javascript"
+        charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/mode-dockerfile.js" type="text/javascript"
+        charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/theme-twilight.js" type="text/javascript"
+        charset="utf-8"></script>
+    <link rel="stylesheet" href="http://cdn.zap.be/css/entypo.css">
+    <title>Opening...</title>
+    <style>
+        body {
+            background-color: whi\; font-family: 'Roboto', sans-serif;
+        }
+
+        /* .size {
+            height: 100vh;
+            width: 100%;
+        }
+
+        .center {
+            height: 300px;
+            width: 300px;
+            margin: auto;
+            background-color: red;
+            ;
+        } */
+        .center {
+            width: 500px;
+            height: 400px;
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            margin: auto;
+        }
+
+        .title {
+            font-family: 'Poppins';
+            font-size: 30px;
+            text-align: center;
+            margin-top: 20px;
+
+        }
+
+        .subtitle {
+            font-size: 15px;
+            text-align: center;
+
+        }
+
+        .loading {
+            display: block;
+            margin: auto;
+            margin-top: 80px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="center">
+        <img src="https://storage.rafael.network/static/831.gif" width="64" height="64" class="loading">
+        <h2 class="title">Starting {{name}}...</h2>
+        <p class="subtitle">Host <span id="host">{{host}}</span></p>
+        <p id="pk" style="display: none;">{{pk}}</p>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function probeService() {
+            setInterval(() => {
+                var host = document.getElementById("host").innerText
+                var pk = document.getElementById("pk").innerText
+                fetch("ready/" + pk + "/").then(res => {
+                    if (res.status < 500) {
+                        setTimeout(() => {
+                            window.location = "{{protocol}}" + host;
+                        }, 5000);
+
+                    }
+
+                }).catch(err => {
+                    console.log(err)
+                })
+            }, 1000);
+
+        }
+        probeService()
+    </script>
+
+    </div>
+</body>
+
+</html>

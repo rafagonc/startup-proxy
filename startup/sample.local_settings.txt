@@ -1,0 +1,23 @@
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'startup',
+        'USER': 'rafagonc',
+        'PASSWORD': "cocacola",
+        'HOST': "localhost",
+        'PORT': 5432,
+    }
+}
+
+#Prod
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'startup',
+        'USER': 'postgres',
+        'PASSWORD': "cocacola",
+        'HOST': "rafael.network",
+        'PORT': 5431,
+    }
+}
+åß
