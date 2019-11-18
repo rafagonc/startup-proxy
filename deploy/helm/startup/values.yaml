@@ -18,7 +18,7 @@ service:
 
 persistence:
   enabled: true
-  storageClass: startup
+  # storageClass: 
   accessMode: ReadWriteOnce
   size: 20Mi
 
@@ -32,7 +32,6 @@ ingress:
   tls: []
 
 resources: {}
-nodeSelector:
-  node0: "true"
+nodeSelector: {}
 tolerations: []
 affinity: {}
