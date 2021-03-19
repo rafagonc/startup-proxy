@@ -20,7 +20,7 @@ django-cors-headers==3.2.0
 django-prometheus-metrics==0.0.1
 django-tables2==1.16.0
 django-widget-tweaks==1.4.5
-djangorestframework==3.10.3
+djangorestframework==3.11.2
 djangorestframework-jwt==1.11.0
 docutils==0.15.2
 EasyProcess==0.2.7
