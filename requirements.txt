@@ -73,7 +73,7 @@ PyYAML==5.1.1
 regex==2019.8.19
 requests==2.22.0
 requests-oauthlib==1.2.0
-rsa==4.0
+rsa==4.1
 six==1.12.0
 traitlets==4.3.2
 tzlocal==2.0.0
