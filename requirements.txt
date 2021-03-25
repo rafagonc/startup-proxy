@@ -69,7 +69,7 @@ python-dateutil==2.8.0
 python-json-logger==0.1.11
 pytz==2019.1
 pytzdata==2019.3
-PyYAML==5.1.1
+PyYAML==5.4
 regex==2019.8.19
 requests==2.22.0
 requests-oauthlib==1.2.0
